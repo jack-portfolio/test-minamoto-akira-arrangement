@@ -1,0 +1,586 @@
+@charset "UTF-8";
+/* =========================
+   PC用
+========================= */
+
+/* メイン 全体 */
+.page-title,
+.work-card__title{
+  text-shadow:0 3px 10px rgba(0,0,0,0.7);
+}
+
+.works-page{
+  max-width:1000px;
+  margin:120px auto;
+  padding:0 30px;
+  color:#FFFFFF;
+}
+ 
+.page-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:60px;
+}
+
+.work-card__info{
+  text-align:left;
+  flex:1;
+}
+ 
+/* 作品カード */
+.work-card{
+  display:flex;
+  flex-wrap:wrap;
+
+  row-gap:60px;
+  column-gap:60px;
+
+  margin:80px 0;
+  padding:100px 36px 80px;
+  /* 上100px / 左右36px / 下80px */
+
+  align-items:center;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  border-radius:15px;
+  
+  opacity:0;
+  transform:translateY(40px);
+  transition: transform 0.5s ease, opacity 0.6s ease;
+
+  backdrop-filter: blur(4px);
+  background: rgba(255,255,255,0.03);
+
+  position: relative;
+}
+
+.work-card:first-child{
+  margin-top:20px;
+}
+
+.work-card:last-child{
+  margin-bottom:20px;
+}
+
+/* 表示 */
+.work-card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* hover */
+.work-card:hover,
+.work-card.show:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+.work-card:nth-child(1){ transition-delay:0.05s; }
+.work-card:nth-child(2){ transition-delay:0.1s; }
+.work-card:nth-child(3){ transition-delay:0.15s; }
+.work-card:nth-child(4){ transition-delay:0.2s; }
+
+/* 漫画画像 */
+.work-card__image{
+  width:100%;
+  max-width:335px;
+  margin:0 auto;
+  border-radius:15px;
+  overflow:hidden;
+}
+
+.work-card__image img {
+  width:100%;
+  aspect-ratio: 2 / 3;
+  object-fit:cover;    /* ← はみ出しをトリミング */
+
+  transition: transform 0.4s ease;
+  box-sizing:border-box;
+
+  display:block; /* ←（隙間防止） */
+  height:auto;
+
+  transform: scale(1);
+  transform-origin: center;
+  border-radius:15px;
+}
+
+.work-card:hover img{
+  transform: scale(1.05);
+}
+
+/* 作品4の画像に縁をつける カード用（枠だけ） */ 
+.work-card--serialization img { 
+  border:6px solid rgba(182,0,51,0.8); 
+  border-radius:15px; 
+  overflow:hidden; 
+}
+
+/* 作品5の画像に縁をつける カード用（枠だけ） */
+.work-card--illustration img {
+  border:6px solid #fff;
+  border-radius:15px;
+  overflow:hidden;
+}
+ 
+/* 作品（タイトル） */
+.work-card__title {
+  font-size:36px;
+  display:inline-block;
+  border-bottom:1px solid rgba(255,255,255,0.6);
+
+  padding-bottom:8px;
+  margin-bottom:16px;
+
+  width:100%;
+  text-align:left;
+}
+
+.work-card__title span {
+  display: block;
+}
+
+/* X（Twitter）にて、公開中!だけ大きくする */
+.free-title{
+  font-size:20px;
+  font-weight:700;
+}
+
+/* 出版社 */
+.work-card__title-sub {
+  display:inline; 
+  font-size:14px;
+  color:rgba(255,255,255,0.8);
+}
+
+/* あらすじ */
+.work-story{
+  line-height:1.8;
+  margin-bottom:40px;
+  font-size:18px;
+  color:#FFFFFF;
+}
+
+/* 試し読み */
+.trial-reading{
+  font-size:18px;
+  font-weight:700;
+  margin:25px 0 10px;
+
+  display:flex;
+  align-items:center;
+}
+
+.trial-reading::before{
+  content:"📖";
+  font-size:30px;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.7));
+  border-radius:6px;
+}
+
+.trial-reading::after{
+  content:"";
+  flex:1;
+  height:2px;
+  background:rgba(255,255,255,0.8);
+}
+
+/* =========================
+   ボタン共通
+========================= */
+.work-card__buttons .btn:focus{
+  outline:2px solid #fff;
+  outline-offset:2px;
+}
+
+.btn {
+  min-width: 140px;
+  text-align: center;
+}
+
+.work-card__buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  justify-content:flex-start; /* ← 左揃え固定 */
+}
+
+.work-card__buttons .btn{
+  display:inline-block;
+  padding:12px 20px;
+  margin-left:0;
+
+  background:#000000;
+  color:#fff;
+
+  text-decoration:none;
+  text-align:center;
+  
+  border-radius:8px;
+  margin:0;
+
+  font-size:15px;
+  transition:0.2s;
+
+  position:relative;
+  overflow:hidden;
+}
+
+/* 光エフェクト */
+.work-card__buttons .btn::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
+  transition:0.5s;
+}
+
+.work-card__buttons .btn:hover::after{
+  left:100%;
+}
+
+/* =========================
+    Kindle（Amazon） ボタン
+========================= */
+.btn.kindle{
+  background: linear-gradient(180deg, #f7dfa5 0%, #f0c14b 100%);
+  color:#111;
+  font-weight:600;
+
+  border:1px solid #a88734;
+  border-radius:8px;
+  padding:10px 18px;
+
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+
+  text-shadow:0 1px 0 rgba(255,255,255,0.6);
+}
+
+.btn.kindle:hover{
+  background: linear-gradient(180deg, #f5d78e 0%, #eeb933 100%);
+}
+
+.btn.kindle:active{
+  transform:translateY(1px);
+  box-shadow:0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* =========================
+    pixiv ボタン
+========================= */
+.btn.pixiv{
+  background:#0096fa;
+  color:#fff;
+  font-weight:600;
+
+  border-radius:8px;
+  padding:10px 18px;
+  border:1px solid #007ad6;
+
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+.btn.pixiv:hover{
+  background:#008ae6;
+}
+
+/* =========================
+   X(Twitter)ボタン
+========================= */
+.btn.x{
+  background:#000;
+  color:#fff;
+  font-weight:600;
+
+  border-radius:8px;
+  border:1px solid #333;
+  padding:10px 18px;
+
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.btn.x:hover{
+  background:#111;
+}
+
+/* =========================
+   自由帳ボタン
+========================= */
+
+.btn.free-book{
+  background:#FFFFFF;
+  color:#706CAA;
+  font-size:16px;
+  padding:10px 18px;
+  text-shadow:none;
+}
+
+.btn.free-book:hover{
+  background:#706CAA;
+  color:#FFFFFF;
+}
+
+/* ボタン ここまで */
+
+/* =========================
+   ラベル（目立たせる）
+========================= */
+@media screen and (min-width:1401px){
+  .work-card:nth-child(even){ 
+    flex-direction: row-reverse; 
+  } 
+  
+  .work-card--serialization{ 
+    flex-direction: row; 
+  } 
+}
+
+/* NEW - 現在、Palcyにて連載中！ */
+.work-card--serialization .work-label--new{
+  background: rgba(182,0,51,0.8); 
+  color:#fff; 
+  display:block; 
+  width:100%; /* ← 横幅を揃える */ 
+
+  padding:7px 14px; 
+  margin: 0 auto 20px;
+
+  line-height:1.4; 
+  font-weight:700; 
+  
+  text-align:center; 
+  box-sizing:border-box;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: clamp(12px, 3.8vw, 22px);
+}
+
+/* タイトルの上余白を小さくする */
+.work-card--serialization .work-card__title {
+  margin-top:0; /* デフォルトの余白を消す */
+}
+
+/* コミックス第1巻、発売中！ */
+.work-release{
+  background: rgba(182,0,51,0.8);
+  color:#fff;
+
+  display:block;
+
+  padding:7px 14px;
+
+  margin-top:40px;
+
+  font-size:22px;
+  line-height:1.4;
+  font-weight:700;
+
+  text-align:center;
+  box-sizing:border-box;
+}
+
+/* フッター */
+#footer{
+  text-align:center;
+  padding:40px 20px;
+}
+
+/* =========================
+   PC用 ここまで
+========================= */
+
+/* =========================
+   タブレット（〜1400px）
+========================= */
+
+@media screen and (max-width:1400px){
+
+  /* カード縦並び */
+  .work-card{
+    align-items:center;
+    text-align:center;
+    flex-direction:column;  /* ← 縦並びに変更 */
+    display:flex;
+
+    margin-bottom:100px;
+    gap:50px;
+
+    justify-content:center;
+    box-sizing:border-box;
+  }
+
+  .work-card__info{
+    flex:1;
+    max-width:600px;
+    text-align:left;
+  }
+  
+  /* 作品（タイトル） */
+  .work-card__title {
+    font-size:24px;
+    border-bottom:1px solid rgba(255,255,255,0.6);
+    padding-bottom:6px;
+
+    display:block;
+    width:100%;
+
+    text-align:center;
+  }
+
+  /* 出版社 */
+  .work-card__title-sub {
+    display:block;
+    width:100%;
+  }
+  
+  /* あらすじ：中央配置＋左揃え */
+  .work-story{
+    text-align:left;
+    max-width:100%;
+    line-height:1.9;
+
+    padding-bottom: 20px;
+
+    font-size:18px;
+    letter-spacing:0.03em;
+    width:100%;
+  }
+
+  /* X（Twitter）にて、公開中!  */
+    .free-title{
+    display:block;
+    font-size:20px;
+    font-weight:700;
+  }
+
+  .work-card__image{
+    width:270px;
+    margin: 0 auto;
+    display: block;   /* ← flex影響を切る */
+  }
+
+  /* NEW - 現在、Palcyにて連載中！ */
+  .work-card--serialization .work-label--new {
+    padding:7px 20px;
+    text-align:center;
+  }
+
+  /* コミックス第1巻、発売中！ */
+  .work-release{
+    max-width:100%;
+  }
+
+}
+
+/* =========================
+   タブレットここまで
+========================= */
+
+/* =========================
+   スマホ（768px）
+========================= */
+
+@media screen and (max-width:768px){
+  
+  /* 作品 カード縦並び */
+  .work-card{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+
+    max-width:none;
+    padding:20px 20px; /* 余白を減らす */
+  }
+
+  .work-card__info{
+    flex:1;
+    max-width:525px;
+    text-align:left;
+  }
+
+  /* 漫画画像 */
+  .work-card__image{
+    width:100%;
+    max-width:335px;
+  }
+
+  /* 作品（タイトル） */
+  .work-card__title {
+    font-size:20px;
+    margin-top:5px;
+    margin-bottom:8px;
+  }
+
+  /* あらすじ */
+  .work-story{
+    text-align:left;
+    max-width:100%;
+    line-height:1.8;
+    padding-bottom:20px;
+    font-size:14px;
+    letter-spacing:0.03em;
+    width:100%;
+  }
+
+  /* ボタン */
+  .work-card__buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  /* =========================
+   ラベル（小さくする）
+  ========================= */
+
+  /* NEW - 現在、Palcyにて連載中！ */ 
+  .work-card--serialization .work-label--new {
+    display:block;           /* ← ここを修正 */
+    width:100%;
+  
+    font-size:clamp(14px, 4vw, 18px); /* ← これも追加（重要） */
+    padding:5px 8px;
+  
+    line-height:1.4;
+    font-weight:700;
+    text-align:center;
+  
+    background: rgba(182,0,51,0.8);
+    color:#fff;
+    margin: 0 auto 16px; /* ← PCと揃えると統一感UP */
+    letter-spacing: -0.02em;
+  
+    white-space: normal;   /* ← 折り返しOK */
+    overflow: visible;     /* ← 切らない */
+    text-overflow: clip;   /* ← …やめる */
+  }
+
+  /* コミックス第1巻、発売中！ */
+  .work-release{
+    width:100%;
+    font-size:18px;
+    padding:5px 8px;
+  }
+
+}
+
+/* =========================
+   スマホ ここまで
+========================= */

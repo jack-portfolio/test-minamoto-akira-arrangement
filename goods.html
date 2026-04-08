@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>MINAMOTO AKIRA | グッズ（企画中）</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.jpg">
+    <link rel="stylesheet" href="css/style_arrangement.css">
+    <link rel="stylesheet" href="css/goods.css"> <!-- グッズ専用CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="robots" content="noindex, nofollow">
+  </head>
+
+  <body>
+    <!-- ヘッダー -->
+    <header class="header" id="header">
+      <div class="container">
+        <h1 class="logo">
+          <img src="images/logo.png" alt="源明來（漫画家）">
+        </h1>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="globalnav">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="index.html#profile">プロフィール</a></li>
+            <li><a href="works_arrangement.html">源明來の作品</a></li>
+            <li><a href="fanletter.html">ファンレター</a></li>
+            <li><a href="index.html#notice">お知らせ</a></li>
+            <li><a href="goods.html">グッズ（企画中）</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- メイン -->
+    <main>
+      <!-- グッズ企画中 -->
+      <section class="goods-header">
+        <img src="images/企画中.jpg" alt="グッズ企画中">
+        <h2 class="goods-title">源明來 - グッズ（企画中）</h2>
+        <p class="goods-text">グッズの販売を企画中です。</p>
+        <p class="goods-text">発売まで、しばらくお待ちください。</p>
+      </section>
+
+      <section id="notice">
+        <div class="notice-banner">
+          <img src="images/お知らせ.jpg" alt="お知らせ">
+        </div>
+      </section>
+
+      <!-- 源明來の作品 -->
+      <section class="works">
+        <h2><a href="works_arrangement.html">源明來の作品</a></h2>
+        <ul>
+          <li><img src="images/work1.jpg" alt="イラスト1"></li>
+          <li><img src="images/work2.jpg" alt="イラスト2"></li>
+          <li><img src="images/work3.jpg" alt="イラスト3"></li>
+          <li><img src="images/work4.jpg" alt="イラスト4"></li>
+        </ul>
+      </section>
+    </main>
+    <!-- メイン ここまで -->
+
+    <!-- フッター -->
+    <footer id="footer">
+      <p>&copy; MINAMOTO AKIRA / 源 明來</p>
+      <div class="footer-sns-icons">
+        <a href="https://x.com/M_akira43" target="_blank" rel="noopener noreferrer">
+          <img src="images/x-logo/logo-white.png" alt="X">
+        </a>
+        <a href="https://www.pixiv.net/users/96333804" target="_blank" rel="noopener noreferrer">
+          <img src="images/pixiv_logo.png" alt="pixiv">
+        </a>
+      </div>
+    </footer>
+    <!-- フッター ここまで -->
+
+    <!-- 上へ戻るボタン -->
+    <a href="#" class="back-to-top">↑</a>
+
+    <!-- ハンバーガーメニュー -->
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".globalnav");
+      const body = document.body;
+      const navLinks = document.querySelectorAll(".globalnav a");
+
+      if (hamburger) {
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          nav.classList.toggle("active");
+          body.classList.toggle("menu-open");
+        });
+
+        navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            nav.classList.remove("active");
+            body.classList.remove("menu-open");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

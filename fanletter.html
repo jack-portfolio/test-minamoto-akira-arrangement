@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>MINAMOTO AKIRA|源明來・漫画家</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.jpg">
+    <link rel="stylesheet" href="css/style_arrangement.css">
+    <link rel="stylesheet" href="css/fanletter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header" id="header">
+      <div class="container">
+          <h1 class="logo">
+              <img src="images/logo.png" alt="源明來（漫画家）">
+          </h1>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        <nav class="globalnav">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="index.html#profile">プロフィール</a></li>
+            <li><a href="works_arrangement.html">源明來の作品</a></li>
+            <li><a href="fanletter.html">ファンレター</a></li>
+            <li><a href="index.html#notice">お知らせ</a></li>
+            <li><a href="goods.html">グッズ（企画中）</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ヘッダーここまで -->
+
+    <main>
+        <article class="fanletter-text">
+            <h1>源 明來へ、ファンレターを送る</h1>
+
+            <p class="contact-note">
+              ※現在、ファンレターの送信機能は<br>
+              停止しております。<br>
+              X（Twitter）のDMよりご連絡ください。
+            </p>
+            
+            <p>予め下記をご了承くださいますようお願いいたします。</p>
+
+            <p>・ファンレターへのご返信はできません。</p>
+            <p>・内容がふさわしくないと判断したものについては破棄させていただきます。</p>
+            <p>・個人を特定できる個人情報や連絡先（電話番号、LINE ID、その他SNSアカウント）の記載は禁止です。</p>
+            <p>・ファンレターは本WEBサイトのみで受け付けております。直接のお手紙やプレゼントは受け付けておりません。</p>
+
+            <form class="fanletter-form" action="#" method="post">
+
+                <!-- ニックネーム -->
+                <div class="form-group">
+                    <label class="form-label">
+                        ニックネーム※
+                        <span class="sub-label">（お名前）</span>
+                    </label>
+                    <input type="text" name="nickname" required>
+                </div>
+
+              <!-- きっかけ -->
+              <div class="form-group vertical">
+                <label class="form-label">
+                  漫画家・源 明來をお知りになったきっかけは？
+                </label>
+              </div>
+
+              <div class="checkbox-group">
+                <div>
+                  <input type="checkbox" name="reason" value="女王陛下の異世界戦略">
+                  <span>女王陛下の異世界戦略</span>
+                </div>
+
+              <div>
+                <input type="checkbox" name="reason" value="傷物令嬢の最後の恋">
+                <span>傷物令嬢の最後の恋</span>
+              </div>
+
+              <div>
+                <input type="checkbox" name="reason" value="知り合いの紹介">
+                <span>知り合いの紹介で</span>
+              </div>
+
+              <div>
+                <input type="checkbox" name="reason" value="SNS">
+                <span>SNS（Xやpixiv）やWebサイトなど、その他</span>
+              </div>
+
+              <!-- メッセージ -->
+              <div class="form-group">
+                  <label class="form-label">メッセージ※</label>
+                  <textarea name="message" rows="15" required></textarea>
+              </div>
+
+              <!-- 送信ボタン -->
+              <div class="form-group">
+                  <span class="form-label"></span> 
+                <!-- 空ラベル -->
+                <button type="button" class="submit-btn"onclick="alert('現在は送信機能を停止しています。')">
+                  ファンレターを送る
+                </button>
+              </div>
+
+            </form>
+
+            <div class="sns-section">
+
+              <p class="DM-text">
+                X（Twitter）や pixivのフォロー、DMもお待ちしております!
+              </p>
+
+                <div class="sns-buttons">
+                    <a href="https://x.com/M_akira43" class="btn x" target="_blank" rel="noopener noreferrer">
+                      <img src="images/アイコン.jpg" alt="">
+                      <span class="sns-text">
+                        <span class="main">X:@M_akira43</span>
+                        <span class="sub">源 明來</span>
+                      </span>
+                    </a>
+
+                    <a href="https://www.pixiv.net/users/96333804" class="btn pixiv" target="_blank" rel="noopener noreferrer">
+                      <img src="images/アイコン.jpg" alt="">
+                      <span class="sns-text">
+                        <span class="main">pixiv</span>
+                        <span class="sub">源 明來</span>
+                      </span>
+                    </a>
+                </div>
+            </div>
+            
+        </article>
+
+        <div class="fanart-gallery">
+            <img src="images/illust1.jpg" alt="イラスト1">
+            <img src="images/illust2.jpg" alt="イラスト2">
+            <img src="images/illust3.jpg" alt="イラスト3">
+            <img src="images/illust4.jpg" alt="イラスト4">
+        </div>
+
+    </main>
+    
+    <!-- フッター -->
+    <footer id="footer">
+      <p>&copy; MINAMOTO AKIRA / 源 明來</p>
+
+      <!-- SNSアイコン -->
+      <div class="footer-sns-icons">
+        <a href="https://x.com/M_akira43" target="_blank" rel="noopener noreferrer">
+          <img src="images/x-logo/logo-white.png" alt="X">
+        </a>
+
+        <a href="https://www.pixiv.net/users/96333804" target="_blank" rel="noopener noreferrer">
+          <img src="images/pixiv_logo.png" alt="pixiv">
+        </a>
+      </div>
+    </footer>
+    <!-- フッターここまで -->
+
+    <!-- 上へ戻るボタン -->
+    <a href="#" class="back-to-top">↑</a>
+  
+    <!-- ハンバーガーメニュー -->
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".globalnav");
+      const body = document.body;
+      const navLinks = document.querySelectorAll(".globalnav a");
+    
+      if (hamburger) {
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          nav.classList.toggle("active");
+          body.classList.toggle("menu-open");
+        });
+    
+        /* メニューリンクを押したら閉じる */
+        navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            nav.classList.remove("active");
+            body.classList.remove("menu-open");
+          });
+        });
+      }
+    </script>
+</body>
+</html>

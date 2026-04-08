@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>MINAMOTO AKIRA|源明來・漫画家</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.jpg">
+    <link rel="stylesheet" href="css/style_arrangement.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header" id="header">
+      <div class="container">
+          <h1 class="logo">
+              <img src="images/logo.png" alt="源明來（漫画家）">
+          </h1>
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        <nav class="globalnav">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="index.html#profile">プロフィール</a></li>
+            <li><a href="works_arrangement.html">源明來の作品</a></li>
+            <li><a href="fanletter.html">ファンレター</a></li>
+            <li><a href="index.html#notice">お知らせ</a></li>
+            <li><a href="goods.html">グッズ（企画中）</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- ヘッダーここまで -->
+
+    <!-- メイン -->
+    <main class="contact-page">
+
+      <!-- タイトル -->
+      <h2 class="page-title">お問い合わせ</h2>
+
+      <!-- 説明 -->
+      <div class="contact-intro">
+        <p>
+          お仕事のご依頼やご相談、ご質問などは
+          下記フォームよりご連絡ください。
+        </p>
+
+        <p>
+          内容によっては返答にお時間をいただく場合や、
+          返答できかねる場合もございますのでご了承ください。
+        </p>
+      
+        <p>
+          また、メールアドレスはお間違えのないようご注意ください。
+        </p>
+      </div>
+
+      <!-- フォーム ※フォーム送信機能はバックエンド側で実装予定 -->
+      <form class="contact-form" action="#" method="post">
+
+      <div class="form-group">
+        <label for="name">お名前※</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="furigana">ふりがな※</label>
+        <input type="text" id="furigana" name="furigana" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">メールアドレス※</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+        <!-- チェックボックス -->
+        <div class="checkbox-group">
+
+          <div class="checkbox-item"> 
+            <input type="checkbox" name="subject[]" value="お仕事のご依頼"> 
+            <span>お仕事のご依頼</span> 
+          </div>
+
+          <div class="checkbox-item"> 
+            <input type="checkbox" id="web" name="subject[]" value="WEBサイトに関するお問い合わせ"> 
+            <span>当WEBサイトに関するお問い合わせ</span> 
+          </div>
+
+          <div class="checkbox-item"> 
+            <input type="checkbox" id="other" name="subject[]" value="その他"> 
+            <span>その他</span> 
+          </div>
+      
+        </div>
+
+        <div class="form-group">
+          <label for="message">お問い合わせ内容※</label>
+          <textarea id="message" name="message" rows="15" required></textarea>
+        </div>
+
+        <button type="button" class="submit-btn"onclick="alert('現在はXのDMよりお問い合わせください')">
+          送信
+        </button>
+
+        <p class="contact-note">
+          ※現在はXのDMよりお問い合わせをお願いいたします。
+        </p>
+
+      </form>
+      <!-- ※フォーム送信機能はバックエンド側で実装予定 -->
+
+      <!-- 区切り -->
+      <div class="contact-divider"></div>
+
+      <!-- 補足 -->
+      <section class="contact-sub">
+
+        <h3>DMでのお問い合わせについて</h3>
+
+        <p class="dm-text">
+          X（旧Twitter）のDMでも対応しております。<br>
+          以下の項目をご記入のうえご連絡ください。
+        </p>
+
+        <ul class="required-list">
+          <li>お名前</li>
+          <li>ふりがな</li>
+          <li>会社名</li>
+          <li>メールアドレス</li>
+          <li>お問い合わせ項目（お仕事のご依頼やご相談、ご質問、その他）</li>
+          <li>お問い合わせ内容</li>
+        </ul>
+
+        <div class="sns-buttons">
+          <a href="https://x.com/M_akira43" class="btn x" target="_blank" rel="noopener noreferrer">
+            <img src="images/アイコン.jpg" alt="X">
+            <div class="sns-text">
+              <span class="main">X : @M_akira43</span>
+              <span class="sub">源 明來</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div class="fanart-gallery">
+      <img src="images/illust10.jpg" alt="イラスト10">
+    </div>
+
+    <!-- フッター -->
+    <footer id="footer">
+      <p>&copy; MINAMOTO AKIRA / 源 明來</p>
+
+      <!-- SNSアイコン -->
+      <div class="footer-sns-icons">
+        <a href="https://x.com/M_akira43" target="_blank" rel="noopener noreferrer">
+          <img src="images/x-logo/logo-white.png" alt="X">
+        </a>
+
+        <a href="https://www.pixiv.net/users/96333804" target="_blank" rel="noopener noreferrer">
+          <img src="images/pixiv_logo.png" alt="pixiv">
+        </a>
+      </div>
+    </footer>
+    <!-- フッターここまで -->
+
+    <!-- 上へ戻るボタン -->
+    <a href="#" class="back-to-top">↑</a>
+  
+    <!-- ハンバーガーメニュー -->
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".globalnav");
+      const body = document.body;
+      const navLinks = document.querySelectorAll(".globalnav a");
+    
+      if (hamburger) {
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          nav.classList.toggle("active");
+          body.classList.toggle("menu-open");
+        });
+    
+        /* メニューリンクを押したら閉じる */
+        navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            nav.classList.remove("active");
+            body.classList.remove("menu-open");
+          });
+        });
+      }
+    </script>
+</body>
+</html>

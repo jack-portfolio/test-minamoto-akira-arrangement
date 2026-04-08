@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+/* =========================
+   PC用
+========================= */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* -----------------
+     グッズ企画中
+----------------- */
+.goods-header img {
+  width: 100%;
+  max-width: 1152px;
+  height: auto;
+  margin-bottom: 40px;
+  border-radius: 20px;
+}
+
+.goods-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.goods-text {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* -----------------
+     お知らせ
+----------------- */
+
+#notice {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 0;
+}
+
+.notice-banner {
+  position: relative;
+  width: 100%;
+  padding-top: 33.33%;
+}
+
+.notice-banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -----------------
+     源明來の作品
+----------------- */
+
+.works {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.works h2 {
+  font-size: 40px;
+}
+
+/* タイトル下線 */
+.works h2 a {
+  position: relative;
+}
+
+.works h2 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #F6F7F8;
+}
+
+/* 作品グリッド */
+.works ul {
+  list-style: none;
+  padding: 0 20px;
+  margin: 10px auto 0;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* 画像 */
+.works li img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+/* ホバーアニメーション */
+.works li img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   スマホ用
+========================= */
+@media screen and (max-width: 767px){
+
+  main {
+    padding: 10px;
+  }
+
+  /* グッズ */
+  .goods-title {
+    font-size: 28px;
+  }
+
+  .goods-text {
+    font-size: 18px;
+  }
+
+  .goods-header img {
+    margin-bottom: 20px;
+    border-radius: 12px;
+  }
+
+  /* 作品 */
+  .works h2 {
+    font-size: 26px;
+  }
+
+  /* グリッド → 2列にする */
+  .works ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+    margin: 10px auto 0;
+  }
+
+  .works {
+    padding: 10px;
+  }
+
+  /* 画像ちょい軽く */
+  .works li img {
+    border-radius: 8px;
+    border: 2px solid #fff;
+  }
+}

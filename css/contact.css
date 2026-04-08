@@ -1,0 +1,459 @@
+@charset "UTF-8";
+
+/* =========================
+   PC用
+========================= */
+/* 全体 */
+.contact-page{
+  max-width: 700px;
+  margin-top: 120px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  color: #fff;
+}
+
+/* お問い合わせ */
+.page-title{
+  font-size: 36px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* お仕事のご依頼や…（説明） */
+.contact-intro{
+  font-size: 18px;
+  text-align: left;
+}
+
+.form-group{
+  margin-bottom: 25px;
+}
+
+.form-group label{
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* （＝お問い合わせ内容）だけ上に余白 */
+.form-group:last-of-type{
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.submit-btn{
+  display: block;
+  width: 200px;
+  margin: 20px auto 0;    /* ← 中央寄せ */
+  padding: 12px;
+  background: #b60033;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  text-align: center;
+  letter-spacing: 0.1em; /* 文字間 */
+  font-size: 16px;
+  cursor: not-allowed;  /* 禁止カーソル */
+}
+
+.submit-btn:hover{
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   チェックボックス
+========================= */
+.checkbox-item label{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  pointer-events: none; /* ← これでテキストはクリック不可 */
+}
+
+.checkbox-item input{
+  width: 16px;
+  height: 16px;
+  position: center;
+  margin-top: 0px;
+  flex-shrink: 0;
+  transform: translateY(2px); /* ← 微調整 */
+}
+
+/* テキスト側 */
+.checkbox-item span{
+  font-size: 18px;
+  line-height: 1;
+  margin-top: 0px;
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* =========================
+   フォーカス時（入力中）
+========================= */
+.form-group input:focus,
+.form-group textarea:focus{
+  outline: 2px solid #b60033;
+}
+
+/* =========================
+   ※現在はXのDMよりお問い合…
+========================= */
+.contact-note{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+/* =========================
+   SNSボタン共通
+========================= */
+.btn {
+  display: flex;
+  align-items: center;
+  width: 260px;            /* ボタン幅統一 */
+  padding: 10px 18px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sns-section {
+  display: flex;
+  flex-direction: column;       /* 縦並び */
+  align-items: center;          /* 横中央に揃える */
+  text-align: center;           /* テキスト中央寄せ */
+  margin-top: 40px;
+}
+
+/* 文字部分 */
+.sns-text {
+  display: flex;
+  flex-direction: column;   /* 縦2行に */
+  justify-content: center;  /* 縦中央 */
+  align-items: center;      /* 横中央 */
+  text-align: center;
+  flex: unset;   /* アイコンの横幅以外すべて文字に */
+}
+
+/* =========================
+   Xボタン
+========================= */
+.btn.x {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  border: 1px solid #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3),
+              inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.btn.x:hover {
+  background: #111;
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+/* Xボタン内のメイン文字 */
+.btn.x .sns-text .main {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 8px;   /* 下に空間を作る */
+}
+
+/* Xボタン内のサブ文字 */
+.btn.x .sns-text .sub {
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.btn.x img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* SNSボタン配置 */
+.sns-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 100px;
+}
+
+.btn:hover img {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+/* =========================
+   DMでのお問い合わせについて
+========================= */
+.contact-sub h3{
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   X（旧Twitter）のDMでも…
+========================= */
+.dm-text{
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   お名前、ふりがな…（項目など）
+========================= */
+.required-list{
+  font-size: 18px;     /* ← サイズ調整 */
+  padding-left: 20px;     /* ← ズレ解消（超重要） */
+}
+
+.required-list li{
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* X（Twitter）やpixiv… */
+.DM-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* =========================
+   イラスト10
+========================= */
+.fanart-gallery {
+  max-width: 1000px; /* 希望のサイズ */
+  margin: 0 auto;    /* 左右中央寄せ（重要） */
+  padding: 0 20px;   /* スマホ時の左右余白 */
+  box-sizing: border-box;
+}
+
+.fanart-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  
+  /* 影をつける設定 */
+  /* 横に0, 縦に10px, ぼかし25px, 影の色（黒の透明度50%） */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
+}
+
+/* =========================
+   タブレット（1024px以下）
+========================= */
+@media screen and (max-width: 1024px){
+
+  .contact-page{
+    margin-top: 100px;
+    padding: 0 30px;
+  }
+
+  .page-title{
+    font-size: 30px;
+  }
+
+  .contact-intro{
+    font-size: 16px;
+    line-height: 1.8;     /* ← 行間を広げる */
+    max-width: none;   /* ← 消す */
+    margin: 0;         /* ← 左揃えに */
+  }
+
+  .form-group input,
+  .form-group textarea{
+    box-sizing: border-box;
+  }
+
+  .form-group:last-of-type{
+    font-size: 18px;
+  }
+
+  .submit-btn{
+    width: 180px;
+    font-size: 15px;
+  }
+
+  /* チェックボックス */
+  .checkbox-item span{
+    font-size: 16px;
+  }
+
+  /* =========================
+   ※現在はXのDMよりお問い合…
+  ========================= */
+  .contact-note{
+    font-size: 12px;
+    line-height: 1.8;
+    word-break: break-word;
+  }
+
+  /* SNS */
+  .sns-buttons{
+    flex-direction: column;   /* 横→縦に */
+    align-items: center;
+    gap: 15px;
+    margin-top: 60px;
+  }
+
+  .btn{
+    width: 240px;
+  }
+
+  .btn.x img{
+    width: 45px;
+    height: 45px;
+  }
+
+  /* テキスト */
+  .contact-sub h3{
+    font-size: 28px;
+  }
+
+  .dm-text{
+    font-size: 18px;
+  }
+
+  .required-list{
+    font-size: 16px;
+  }
+
+  .DM-text{
+    font-size: 18px;
+  }
+
+  /* 画像 */
+  .fanart-gallery{
+    box-sizing: border-box;
+  }
+
+}
+
+/* =========================
+   スマホ（768px以下）
+========================= */
+@media screen and (max-width: 768px){
+
+  .contact-page{
+    margin-top: 80px;
+    padding: 0 20px;
+  }
+
+  .page-title{
+    font-size: 24px;
+  }
+
+  .contact-intro{
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .form-group{
+    margin-bottom: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea{
+    padding: 12px;
+    font-size: 16px; /* ← 重要（ズーム防止） */
+    box-sizing: border-box;
+  }
+
+  .form-group:last-of-type{
+    font-size: 16px;
+  }
+
+  .submit-btn{
+    font-size: 15px;
+  }
+
+  /* チェックボックス */
+  .checkbox-item label{
+    align-items: center;
+  }
+
+  .checkbox-item span{
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 0;
+  }
+
+  /* SNS */
+  .sns-buttons{
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+  }
+
+  .btn{
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn.x{
+    gap: 15px;
+  }
+
+  .btn.x img{
+    width: 40px;
+    height: 40px;
+  }
+
+  .btn.x .sns-text .main{
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .btn.x .sns-text .sub{
+    font-size: 12px;
+  }
+
+  /* テキスト */
+  .contact-sub h3{
+    font-size: 22px;
+  }
+
+  .dm-text{
+    font-size: 16px;
+  }
+
+  .required-list{
+    font-size: 14px;
+  }
+
+  .DM-text{
+    font-size: 16px;
+  }
+
+  /* 画像 */
+  .fanart-gallery{
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
