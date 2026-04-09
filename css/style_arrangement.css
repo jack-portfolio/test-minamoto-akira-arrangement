@@ -850,6 +850,10 @@ body::after {
     padding:0 20px;
   }
 
+  .globalnav ul li a{
+    font-size:18px;
+  }
+
   /* メインビジュアル高さ */
   #mainvisual{
     padding-top:55%;
