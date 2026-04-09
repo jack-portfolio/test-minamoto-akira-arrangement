@@ -510,11 +510,11 @@ body::after {
 /* 上に戻るボタン */
 .back-to-top {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
+  right: 24px;
+  bottom: 24px;
 
-  width: 80px;
-  height: 80px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
 
   box-shadow: 0 4px 15px rgba(0,0,0,0.20);
@@ -526,7 +526,7 @@ body::after {
   justify-content: center;
   align-items: center;
 
-  font-size: 34px;
+  font-size: 24px;
   transition: 0.3s;
   z-index: 1000;
 }
@@ -681,6 +681,15 @@ body::after {
     max-width: 320px;
   }
   /* お問い合わせここまで */
+
+  /* -----------------
+     上に戻るボタン
+  ----------------- */
+  .back-to-top{
+    width:45px;
+    height:45px;
+    font-size:28px;
+  }
 
   /* =========================
     ハンバーガーメニュー
@@ -1109,14 +1118,58 @@ body::after {
   /* -----------------
      上に戻るボタン
   ----------------- */
-
   .back-to-top{
-    width:45px;
-    height:45px;
-    font-size:25px;
-    right:20px;
-    bottom:20px;
+    width:35px;
+    height:35px;
+    font-size:20px;
+    right:10px;
+    bottom:10px;
   }
+
+  /* =========================
+    ハンバーガーメニュー
+  ========================= */
+
+  /* ハンバーガー */
+  .hamburger{
+    width:40px;
+    height:40px;
+  }
+
+  /* 線 */
+  .hamburger span{
+    width:18px;
+    height:2px;
+  }
+
+  /* 3本の位置 */
+  .hamburger span:nth-child(1){
+    top:13px;
+  }
+
+  .hamburger span:nth-child(2){
+    top:19px;
+  }
+
+  .hamburger span:nth-child(3){
+    top:25px;
+  }
+
+  /* ハンバーガー → × */
+  .hamburger.active span:nth-child(1){
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+  }
+
+  .hamburger.active span:nth-child(2){
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3){
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+  }
+
 }
 
 /* =========================
@@ -1165,6 +1218,61 @@ body::after {
 
   .cta-text{
     font-size:13px;
+  }
+
+  /* -----------------
+     上に戻るボタン
+  ----------------- */
+  .back-to-top{
+    width:45px;
+    height:45px;
+    font-size:26px;
+    right:15px;
+    bottom:15px;
+  }
+
+  /* =========================
+    ハンバーガーメニュー
+  ========================= */
+
+  /* ハンバーガー */
+  .hamburger{
+    width:38px;
+    height:38px;
+  }
+
+  /* 線 */
+  .hamburger span{
+    width:16px;
+    height:2px;
+  }
+
+  /* 位置調整 */
+  .hamburger span:nth-child(1){
+    top:12px;
+  }
+
+  .hamburger span:nth-child(2){
+    top:18px;
+  }
+
+  .hamburger span:nth-child(3){
+    top:24px;
+  }
+
+  /* ハンバーガー → × */
+  .hamburger.active span:nth-child(1){
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+  }
+
+  .hamburger.active span:nth-child(2){
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3){
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
   }
 
 }

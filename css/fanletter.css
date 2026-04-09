@@ -277,7 +277,11 @@ textarea:focus {
 
 /* X（Twitter）やpixiv… */
 .DM-text {
-  font-size: 20px;
+  max-width: 260px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;   
+  font-size: 20px;    
   font-weight: bold;
 }
 
@@ -361,9 +365,7 @@ textarea:focus {
 
   /* X（Twitter）やpixiv… */
   .DM-text {
-    font-size: 14px;
-    max-width: 90%;
-    margin: 0 auto;
+    font-size: 16px;
   }
 
   /* 画像 */
@@ -433,7 +435,6 @@ textarea:focus {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 6px;
     width: 100%;
   }
 
@@ -462,7 +463,7 @@ textarea:focus {
   }
 
   .submit-btn {
-    padding: 12px 20px; /* ← 50px → 20pxくらいに */
+    padding: 12px 20px; 
   }
 
   /* SNSボタン（縦並び） */
@@ -475,15 +476,6 @@ textarea:focus {
   .btn {
     width: 100%;
     max-width: 280px;
-  }
-
-  /* X（Twitter）やpixiv… */
-  .DM-text {
-    max-width: 240px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.6;
-    word-break: keep-all;
   }
 
   /* 画像（2列にするのがベスト） */

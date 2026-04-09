@@ -110,12 +110,18 @@
 /* =========================
    ※現在はXのDMよりお問い合…
 ========================= */
-.contact-note{
+.top-note {
+  margin: 20px 0 40px;      /* 上下に余白をしっかり */
+  padding: 16px 20px;       /* ← 内側余白を追加（超重要） */
+  
   text-align: center;
-  margin-top: 10px;
-  font-size: 18px;
-  opacity: 0.8;
-  font-weight: 600;
+  font-size: 24px;          /* ← 少し下げる（読みやすいサイズ） */
+  line-height: 1.6;         /* ← 行間を広げる */
+
+  color: #b60033;
+  background-color: #fff;
+  border: 1.5px solid #b60033; /* ← 少し細くして柔らかく */
+  border-radius: 8px;       /* ← 角を丸く（見やすさUP） */
 }
 
 /* =========================
@@ -308,10 +314,8 @@
   /* =========================
    ※現在はXのDMよりお問い合…
   ========================= */
-  .contact-note{
-    font-size: 12px;
-    line-height: 1.8;
-    word-break: break-word;
+  .top-note {
+    font-size: 18px;
   }
 
   /* SNS */
@@ -363,6 +367,13 @@
   .contact-page{
     margin-top: 80px;
     padding: 0 20px;
+  }
+
+  /* =========================
+   ※現在はXのDMよりお問い合…
+  ========================= */
+  .top-note {
+    font-size: 14px;
   }
 
   .page-title{
